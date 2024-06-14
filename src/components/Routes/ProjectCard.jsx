@@ -1,0 +1,63 @@
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
+export const ProjectCard = ({ project, link }) => {
+
+    if (!project) {
+        return <div>Ooops... Proyecto no encontrado</div>
+    }
+
+    const projectRef = useRef(null)
+    const isInView = useInView(projectRef, { once: true })
+
+    const animation = useAnimation()
+
+    useEffect(() => {
+        if (isInView) {
+            animation.start({
+                y: 0,
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    duration: 1.2,
+                    bounce: 0.5,
+                }
+            })
+        } else {
+            animation.start({
+                y: 50,
+                opacity: 0,
+            })
+        }
+    }, [isInView, animation])
+
+    const handleClick = () => {
+        window.open(link, '_blank');
+    };
+
+    return (
+        <motion.div
+            className='group flex flex-col rounded py-2 boxShadow hover:border-blue-mid hover:border-[1px] xs:my-2 md:my-0 2xs:min-h-[350px] md:min-h-fit 2xs:cursor-pointer text-muted-foreground'
+            ref={projectRef}
+            animate={animation}
+            onClick={handleClick}
+            style={{ cursor: 'pointer' }}
+        >
+            <div className='border-b-[3px] border-blue-mid overflow-hidden flex relative rounded-md my-2 mx-4'>
+                <img src={project.images[0][0]} alt="project-image" className='w-full h-full rounded-md transition duration-700 group-hover:scale-110' />
+                <div className='absolute bg-blue-mid top-0 left-0 w-full h-full opacity-20'></div>
+            </div>
+            <h3 className='font-bold text-sm leading-4 my-2 mx-4 duration-700 group-hover:text-white'>{project['card-title']}</h3>
+            <div className='flex flex-wrap gap-1 mx-3 md:text-xs sm:text-sm 2xs:text-xs text-white 2xs:font-medium md:font-semibold'>
+                {project.tags.map((tag, index) => (
+                    <div key={index} className='flex gap-1'>
+                        <div>&bull;</div>
+                        <p>{tag}</p>
+                    </div>
+                ))}
+            </div>
+            <div className='w-100% h-[1px] lg:my-4 2xs:my-2 mx-4 bg-slate-300'></div>
+            <p className='text-blue-dark pb-4 mx-4 truncate'>{project.description.concept}</p>
+        </motion.div>
+    )
+}
