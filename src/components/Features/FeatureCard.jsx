@@ -31,7 +31,7 @@ function FeatureCard({ image, heading, description, ...props }) {
 
     return (
         <motion.div
-            className="border-[1px] rounded-md bg-blue-200 border-blue-100 px-8 py-6 2xs:min-h-[350px] md:min-h-fit 2xs:cursor-grab md:cursor-default text-muted-foreground"
+            className="border-[1px] rounded-md bg-blue-300  px-8 py-6 2xs:min-h-[350px] md:min-h-fit 2xs:cursor-grab md:cursor-default text-muted-foreground"
             ref={featureRef}
             animate={animation}
         >

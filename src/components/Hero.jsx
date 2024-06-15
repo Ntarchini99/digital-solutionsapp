@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import hero from '@/assets/web.png';
+import hero from '@/assets/heroo.png';
 import { useFormContext } from '@/components/Form/FormContext';
 import { animate, motion, useAnimation } from 'framer-motion';
 

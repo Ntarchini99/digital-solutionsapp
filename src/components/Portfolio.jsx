@@ -26,7 +26,7 @@ export const Portfolio = () => {
     return (
         <>
             <RunningLine />
-            <section className='2xs:mx-[1rem] md:mx-[6rem] xl:mx-[16rem] 2xl:mx-[28rem] 3xl:mx-[32rem] my-20 border-b-[1px]'>
+            <section className=' 2xs:mx-[1rem] md:mx-[6rem] xl:mx-[16rem] 2xl:mx-[28rem] 3xl:mx-[32rem] my-20 border-b-[1px]'>
                 <motion.div
                     className='md:pb-10 2xs:pb-6'
                     ref={portfolioRef}
@@ -37,7 +37,7 @@ export const Portfolio = () => {
                     <p className='text-white sm:pr-80'>Interactúe con nuestro portafolio, una colección de proyectos que refleja nuestra pasión por dar vida a los conceptos. De la estrategia al diseño, sea testigo de nuestro viaje para transformar ideas en realidades tangibles..</p>
                 </motion.div>
                 <Slider />
-                <div className='md:grid grid-cols-3 gap-3 2xs:hidden'>
+                <div className='md:grid grid-cols-3 gap-3 2xs:hidden '>
                     {projects.map((project, index) => (
                         <ProjectCard key={index} project={project} link={project.link} />
                     ))}
