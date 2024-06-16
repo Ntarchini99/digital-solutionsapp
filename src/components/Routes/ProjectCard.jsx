@@ -47,8 +47,8 @@ export const ProjectCard = ({ project, link }) => {
                 <img src={project.images[0][0]} alt="project-image" className='w-full h-full rounded-md transition duration-700 group-hover:scale-110' />
                 <div className='absolute bg-blue-mid top-0 left-0 w-full h-full opacity-20'></div>
             </div>
-            <h3 className='font-bold text-sm leading-4 my-2 mx-4 duration-700 group-hover:text-white'>{project['card-title']}</h3>
-            <div className='flex flex-wrap gap-1 mx-3 md:text-xs sm:text-sm 2xs:text-xs text-white 2xs:font-medium md:font-semibold'>
+            <h3 className='font-bold text-sm leading-4 my-2 mx-4 duration-700 group-hover:text-black'>{project['card-title']}</h3>
+            <div className='flex flex-wrap gap-1 mx-3 md:text-xs sm:text-sm 2xs:text-xs text-blue-dark 2xs:font-medium md:font-semibold'>
                 {project.tags.map((tag, index) => (
                     <div key={index} className='flex gap-1'>
                         <div>&bull;</div>
