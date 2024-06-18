@@ -16,7 +16,7 @@ export const Navbar = () => {
                         type: 'spring',
                         bounce: 0.5,
                     }}>
-                    
+
                 </motion.div>
                 <div className='sm:flex 2xs:hidden pt-3 items-center'>
                     <motion.div

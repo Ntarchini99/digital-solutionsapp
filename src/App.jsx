@@ -12,56 +12,56 @@ import { Routes, Route } from 'react-router-dom'
 import { projects } from './components/Routes/projects'
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp'
 
-function App () {
+function App() {
 
   const faqRef = useRef(null);
 
   useEffect(() => {
 
     const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.9,
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.9,
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                faqRef.current.style.backgroundColor = '#1C1953'
-            } else {
-                faqRef.current.style.backgroundColor = '#635BFF';
-            }
-        })
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          faqRef.current.style.backgroundColor = '#1C1953'
+        } else {
+          faqRef.current.style.backgroundColor = '#635BFF';
+        }
+      })
     }, options)
 
     if (faqRef.current) {
-        observer.observe(faqRef.current);
+      observer.observe(faqRef.current);
     }
 
     return () => {
-        if (faqRef.current) {
-            observer.unobserve(faqRef.current);
-        }
+      if (faqRef.current) {
+        observer.unobserve(faqRef.current);
+      }
     }
   }, []);
 
   return (
     <FormProvider>
-      <ButtonWhatsapp/>
+      <ButtonWhatsapp />
       <Navbar />
       <Hero />
       <Features />
       <Routes>
         <Route path='/*' element={<Portfolio />} />
         {projects.map((project) => (
-          <Route 
-              key={project.id}
-              path={`/project/${project.id}`}
-              render={() => <ProjectDetail project={project} />}
+          <Route
+            key={project.id}
+            path={`/project/${project.id}`}
+            render={() => <ProjectDetail project={project} />}
           />
         ))}
       </Routes>
-      <Process /> 
+      <Process />
       {/* <Faq ref={faqRef} /> */}
       <Footer />
       <ContactForm />

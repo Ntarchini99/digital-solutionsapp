@@ -11,15 +11,15 @@ export const Footer = forwardRef(function Footer(props, ref) {
                 <div className='pb-4'>
                 </div>
                 <div className='mt-10'>
-                    <ul className='flex lg:gap-2 2xs:gap-2'>                      
+                    <ul className='flex lg:gap-2 2xs:gap-2'>
                         <li className='hover:scale-125 transition duration-500 spring'>
                             <a href="https://www.instagram.com/digitalsolutions_ok/" target='_blank' className='flex gap-5 items-center cursor-pointer'>
-                                <FontAwesomeIcon icon={faInstagram} style={{color: "#fff"}} className='fa-lg' />
+                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#fff" }} className='fa-lg' />
                             </a>
                         </li>
                         <li className='hover:scale-125 transition duration-500 spring'>
                             <a href="https://www.linkedin.com/company/digital-solutions-agencia/" target='_blank' className='flex gap-5 items-center cursor-pointer'>
-                                <FontAwesomeIcon icon={faLinkedin} style={{color: "#fff"}} className='fa-lg' />
+                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#fff" }} className='fa-lg' />
                             </a>
                         </li>
                     </ul>
