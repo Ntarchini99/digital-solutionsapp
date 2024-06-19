@@ -5,7 +5,6 @@ import { Portfolio } from '@/components/Portfolio'
 import { Process } from '@/components/Process'
 import { Footer } from '@/components/Footer'
 import { ContactForm } from '@/components/Form/ContactForm'
-// import { Faq } from '@/components/Faq'
 import { FormProvider } from '@/components/Form/FormContext'
 import { useRef, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
@@ -53,16 +52,10 @@ function App() {
       <Features />
       <Routes>
         <Route path='/*' element={<Portfolio />} />
-        {projects.map((project) => (
           <Route
-            key={project.id}
-            path={`/project/${project.id}`}
-            render={() => <ProjectDetail project={project} />}
           />
-        ))}
       </Routes>
       <Process />
-      {/* <Faq ref={faqRef} /> */}
       <Footer />
       <ContactForm />
     </FormProvider>
