@@ -78,17 +78,17 @@ export const Hero = () => {
                         ref={cooperRef}
                         initial={{ opacity: 0, y: 30, color: 'white' }}
                         className={`relative z-[45]`}>
-                        <h1 className={`text-blue-dark xs:text-7xl 2xs:text-5xl sm:text-right font-bold pb-2 ${revealing ? 'text-white' : 'text-white'} transition duration-700 ease-in-out tracking-tighter`}>Digital Solutions</h1>
+                        <h1 className={`text-blue-dark xs:text-7xl 2xs:text-5xl sm:text-right font-bold pb-2 ${revealing ? 'text-white' : 'text-white'} transition duration-700 ease-in-out tracking-tighter`}>Verttex Agencia</h1>
                     </motion.div>
                     <motion.div
                         ref={daRef}
                         initial={{ opacity: 0, y: 30, color: 'white' }}
                         className={`relative z-[45]`}>
-                        <h1 className={`text-blue-dark xs:text-6xl 2xs:text-4xl sm:text-right font-bold ${revealing ? 'text-white' : 'text-white'} transition duration-700 ease-in-out tracking-tighter`}>Agencia</h1>
+                        <h1 className={`text-blue-dark xs:text-6xl 2xs:text-4xl sm:text-right font-bold ${revealing ? 'text-white' : 'text-white'} transition duration-700 ease-in-out tracking-tighter`}>Digital</h1>
                     </motion.div>
                     <div className='flex w-full sm:py-4 2xs:py-2'>
                         <div className='2xs:w-0 sm:w-1/6 md:w-2/6'></div>
-                        <p className='2xs:w-full xs:w-5/6 md:w-4/6 text-white sm:text-right'>Elevando su negocio con soluciones digitales e innovadoras. ¡Conéctese con nosotros hoy para acelerar su éxito en internet!</p>
+                        <p className='2xs:w-full xs:w-5/6 md:w-4/6 text-white sm:text-right'>Desarrollamos webs para cualquier sector, gestionamos redes sociales, brindamos asesorías, diseño gráfico, UX/UI y marketing digital 🚀📱</p>
                     </div>
                     <div className='flex w-full'>
                         <div className='sm:w-3/5'></div>
